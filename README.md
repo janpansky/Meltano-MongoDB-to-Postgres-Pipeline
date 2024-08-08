@@ -17,7 +17,7 @@ cd Meltano-MongoDB-to-Postgres-Pipeline
 
 ```sh
 python3 -m venv venv
-source venv/bin/activate  # On Windows use `venv\Scripts\activate`
+source venv/bin/activate
 ```
 
 ### 3. Install Python Dependencies
