@@ -1,5 +1,7 @@
 ![meltano.png](img/meltano.png)
+
 ![mongodb.png](img/mongodb.png)
+
 ![postgresql.png](img/postgresql.png)
 
 # Meltano MongoDB to PostgreSQL Pipeline
