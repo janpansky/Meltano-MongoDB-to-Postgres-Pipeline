@@ -1,3 +1,6 @@
+![img.png](img/meltano.png)
+![img_2.png](img/mongodb.png)
+![img_4.png](img/postgresql.png)
 # Meltano MongoDB to PostgreSQL Pipeline
 
 This repository contains a Meltano project for extracting data from MongoDB and loading it into PostgreSQL.
