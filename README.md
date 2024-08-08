@@ -67,6 +67,7 @@ plugins:
         port: 27017
         username: YOUR_MONGO_USERNAME
         password: YOUR_MONGO_PASSWORD
+      strategy: raw
   loaders:
     - name: target-postgres
       variant: transferwise
@@ -78,6 +79,12 @@ plugins:
         password: YOUR_POSTGRES_PASSWORD
         dbname: postgres
         schema: public
+```
+Choose the strategy as defined https://github.com/z3z1ma/tap-mongodb
+```
+Strategy 1 (strategy: raw) merely outputs data as-is with an additonalProperties: true schema. This is ideal for loading to unstructured sources such as blob storage where it may be preferable to keep documents exactly as they are.
+Strategy 2 (strategy: envelope) will wrap the document in a document key and output a fixed schema. The schema will use type: object and the target should be able to handle unstructured data, ie. via a VARIANT/JSON column.
+Strategy 3 (strategy: infer) infers the schema of each collection from a configurable sample size of records. This allows the tap to work with strongly typed destinations. This is an attractive option. Particularly when we don't expect the documents to vary dramatically.
 ```
 Replace placeholders (YOUR_PROJECT_ID, YOUR_MONGO_USERNAME, YOUR_MONGO_PASSWORD, YOUR_POSTGRES_USER, YOUR_POSTGRES_PASSWORD) with actual values relevant to your setup.
 
