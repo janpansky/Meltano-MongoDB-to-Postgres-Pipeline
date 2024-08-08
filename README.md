@@ -32,11 +32,16 @@ pip install -r requirements.txt
 meltano init
 ```
 
+```sh
+cd Meltano_project_name/
+```
+
 ### 5. Add the Required Meltano Plugins
 
 ```sh
 meltano add tap tap-mongodb
 meltano add target target-postgres
+meltano install
 ```
 
 ### 6. Configure Meltano
